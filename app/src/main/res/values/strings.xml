@@ -51,4 +51,9 @@
 <p>Any claim related to Shoe Notifications Website shall be governed by the laws of il without regards to its conflict of law provisions.</p>
 ]]>
     </string>
+    <string name="name_warning"><![CDATA[
+        <h3>You\'ve entered wrong name. <br/>Your name must:</h3>
+        1. Have a-z, bigger or lower cased letters only.<br/>
+        2. Length of first and last name must be ≥ 2.
+    ]]></string>
 </resources>

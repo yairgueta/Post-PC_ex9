@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.fragment.app.commit
-import com.example.shoe.notifications.mathSection.MathEquationFragment
+import com.example.shoe.notifications.nameSection.NameFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         if (supportFragmentManager.findFragmentByTag("HIHI") == null) {
             supportFragmentManager.commit {
-                add(R.id.fragmentContainerView, MathEquationFragment(), "HIHI")
+                add(R.id.fragmentContainerView, NameFragment(), "HIHI")
             }
         }
     }

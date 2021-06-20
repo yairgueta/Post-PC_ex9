@@ -2,4 +2,5 @@
 <resources>
     <dimen name="vertical_space">30dp</dimen>
     <dimen name="small_vertical_space">7dp</dimen>
+    <dimen name="horizontal_space">30dp</dimen>
 </resources>
