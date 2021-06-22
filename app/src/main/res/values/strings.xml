@@ -54,6 +54,7 @@
     <string name="name_warning"><![CDATA[
         <h3>You\'ve entered wrong name. <br/>Your name must:</h3>
         1. Have a-z, bigger or lower cased letters only.<br/>
-        2. Length of first and last name must be ≥ 2.
+        2. Length of first and last name must be ≥ 3.
     ]]></string>
+    <string name="continue_btn_text">Continue</string>
 </resources>

@@ -7,23 +7,26 @@
 
     <TextView
         android:id="@+id/hello_text"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="@dimen/vertical_space"
+        android:layout_marginHorizontal="@dimen/horizontal_space"
         android:gravity="center_horizontal"
         android:text="we're at Shoe Notifications are so happy to see you here!"
         android:textSize="24sp"
         android:textStyle="bold"
+        style="@style/headers_style"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/next_btm"
+        android:id="@+id/continue_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="Next"
+        android:layout_marginBottom="@dimen/vertical_space"
+        android:backgroundTint="@color/LightGreen"
+        android:text="@string/continue_btn_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

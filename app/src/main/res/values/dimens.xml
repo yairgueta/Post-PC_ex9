@@ -3,4 +3,6 @@
     <dimen name="vertical_space">30dp</dimen>
     <dimen name="small_vertical_space">7dp</dimen>
     <dimen name="horizontal_space">30dp</dimen>
+    <dimen name="medium_vertical_space">15dp</dimen>
+    <dimen name="big_vertical_space">50dp</dimen>
 </resources>

@@ -10,7 +10,7 @@
         android:id="@+id/ageInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="@dimen/vertical_space"
         android:ems="2"
         android:hint="18"
         android:inputType="number"
@@ -50,7 +50,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="@dimen/medium_vertical_space"
         style="@style/headers_style"
         android:text="Please enter your Age"
         android:textAlignment="center"
@@ -59,12 +59,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/submitBtn"
+        android:id="@+id/continue_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="@dimen/vertical_space"
         android:backgroundTint="@color/enabled_disabled_selector"
-        android:text="submit"
+        android:text="@string/continue_btn_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

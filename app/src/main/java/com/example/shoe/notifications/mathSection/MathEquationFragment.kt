@@ -10,12 +10,14 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
+import com.example.shoe.notifications.BaseAbstractFragment
 import com.example.shoe.notifications.R
 import java.lang.NumberFormatException
 
-class MathEquationFragment : Fragment() {
-    private val viewModel: MathEquationViewModel by viewModels()
+class MathEquationFragment : BaseAbstractFragment() {
+    private val viewModel: MathEquationViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,12 +29,12 @@ class MathEquationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val continueButton = view.findViewById<Button>(R.id.continue_button).apply {
+        continueButton.apply {
             isEnabled = viewModel.userAnswer.value != null
             isActivated = true
             setOnClickListener {
                 if (viewModel.isUserRight) {
-                    // Next
+                    mainViewModel.currentFragmentIndex++
                 } else {
                     Toast.makeText(requireContext(), "Wrong answer! Try again!", Toast.LENGTH_SHORT).show()
                 }

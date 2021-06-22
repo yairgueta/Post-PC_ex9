@@ -13,11 +13,13 @@ import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.TextView
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
+import com.example.shoe.notifications.BaseAbstractFragment
 import com.example.shoe.notifications.R
 
-class TermsFragment : Fragment() {
-    private val viewModel: TermsViewModel by viewModels()
+class TermsFragment : BaseAbstractFragment() {
+    private val viewModel: TermsViewModel by activityViewModels()
     private lateinit var checkBox: CheckBox
     private lateinit var shakeAnimation: Animation
 
@@ -34,17 +36,18 @@ class TermsFragment : Fragment() {
 
         shakeAnimation = AnimationUtils.loadAnimation(requireContext(), R.anim.shake_animation)
 
-        val continueButton = view.findViewById<Button>(R.id.continue_button).apply {
+        continueButton.apply {
             setOnClickListener {
                 if (!viewModel.hasAgreed.value!!) {
                     animateCheckBoxWarning()
+                } else {
+                    mainViewModel.currentFragmentIndex++
                 }
             }
-
         }
+
         checkBox = view.findViewById<CheckBox>(R.id.checkBox).apply {
             isChecked = viewModel.hasAgreed.value!!
-
             setOnClickListener {
                 viewModel.hasAgreed.value = isChecked
             }
@@ -57,7 +60,6 @@ class TermsFragment : Fragment() {
 
     private fun animateCheckBoxWarning() {
         checkBox.startAnimation(shakeAnimation)
-
     }
 
     private fun initTermsOfServiceText(view: View) {

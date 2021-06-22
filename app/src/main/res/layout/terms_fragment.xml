@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="7dp"
         android:backgroundTint="@color/enabled_disabled_selector"
-        android:text="Continue"
+        android:text="@string/continue_btn_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
